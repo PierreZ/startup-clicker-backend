@@ -17,7 +17,8 @@ func StartServer() {
 	}))
 
 	e.GET("/api/v0/assets", getAssets)
-	e.POST("/api/v0/assets/:asset", buyAsset)
+	//e.POST("/api/v0/assets/:asset", buyAsset)
+	e.POST("/api/v0/money", addMoney)
 
 	e.Logger.Fatal(e.Start(":" + os.Getenv("PORT")))
 }

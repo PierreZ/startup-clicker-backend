@@ -2,10 +2,28 @@
 
 
 [[projects]]
+  name = "github.com/PierreZ/Warp10Exporter"
+  packages = ["."]
+  revision = "602f33702d7ea1784877cd282e2cef05f7ebf4d3"
+  version = "v1.0.0"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/PierreZ/warpcache"
+  packages = ["."]
+  revision = "6abf19a6dcf20621a528dc1052f69db16c50e617"
+
+[[projects]]
   name = "github.com/dgrijalva/jwt-go"
   packages = ["."]
   revision = "dbeaa9332f19a944acb5736b4456cfcc02140e29"
   version = "v3.1.0"
+
+[[projects]]
+  name = "github.com/gorilla/websocket"
+  packages = ["."]
+  revision = "ea4d1f681babbce9545c9c5f3d5194a789c89f5b"
+  version = "v1.2.0"
 
 [[projects]]
   name = "github.com/labstack/echo"
@@ -32,6 +50,12 @@
   version = "v0.0.3"
 
 [[projects]]
+  name = "github.com/sirupsen/logrus"
+  packages = ["."]
+  revision = "d682213848ed68c0a260ca37d6dd5ace8423f5ba"
+  version = "v1.0.4"
+
+[[projects]]
   branch = "master"
   name = "github.com/valyala/bytebufferpool"
   packages = ["."]
@@ -46,18 +70,18 @@
 [[projects]]
   branch = "master"
   name = "golang.org/x/crypto"
-  packages = ["acme","acme/autocert"]
+  packages = ["acme","acme/autocert","ssh/terminal"]
   revision = "95a4943f35d008beabde8c11e5075a1b714e6419"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/sys"
-  packages = ["unix"]
+  packages = ["unix","windows"]
   revision = "83801418e1b59fb1880e363299581ee543af32ca"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "c0aa529bb6e39442fd166d7113122249415ece00ffee0259dc917f9833408ea6"
+  inputs-digest = "8e55f05796937c36ae3d97fc1011288688f9ff8361c5558794883117e5492d93"
   solver-name = "gps-cdcl"
   solver-version = 1

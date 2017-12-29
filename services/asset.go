@@ -1,4 +1,13 @@
-package assets
+package services
+
+type asset struct {
+	Name        string `json:"name"`
+	Description string `json:"description"`
+	BasePrice   float64
+	Price       float64 `json:"price"`
+	Number      float64 `json:"number"`
+	Rate        float64 `json:"rate"`
+}
 
 // All are all the assets available for startup-clicker
 // Based on http://cookieclicker.wikia.com/wiki/Building

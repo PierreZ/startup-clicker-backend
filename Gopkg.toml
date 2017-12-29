@@ -22,5 +22,17 @@
 
 
 [[constraint]]
+  name = "github.com/PierreZ/Warp10Exporter"
+  version = "1.0.0"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/PierreZ/warpcache"
+
+[[constraint]]
   name = "github.com/labstack/echo"
   version = "3.2.6"
+
+[[constraint]]
+  name = "github.com/sirupsen/logrus"
+  version = "1.0.4"
