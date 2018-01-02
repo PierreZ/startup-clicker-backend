@@ -1,7 +1,6 @@
 package routes
 
 import (
-	"log"
 	"net/http"
 
 	"github.com/PierreZ/startup-clicker-backend/services"
@@ -20,12 +19,10 @@ func addMoney(c echo.Context) error {
 	}
 
 	if input.Click > 10.0 {
-		return c.JSON(http.StatusBadRequest, "not possible to click more than 10 in a sec")
+		return c.JSON(http.StatusBadRequest, "not possible to click more than 10 in a sec ;)")
 	}
 
 	current := services.Money.Get()
-
-	log.Println("current:", current)
 
 	services.Money.Set(current + input.Click)
 
@@ -33,32 +30,29 @@ func addMoney(c echo.Context) error {
 }
 
 func getAssets(c echo.Context) error {
-	return c.JSONPretty(http.StatusOK, services.All, "  ")
+	return c.JSONPretty(http.StatusOK, services.GetAssets(), "  ")
 }
 
-// func buyAsset(c echo.Context) error {
-// 	assetName := c.Param("asset")
+func buyAsset(c echo.Context) error {
+	assetName := c.Param("asset")
 
-// 	// Asset exists?
-// 	if _, ok := services.All[assetName]; !ok {
-// 		return c.String(http.StatusBadRequest, "Bad request")
-// 	}
+	// Asset exists?
+	if _, ok := services.AllAssetReference[assetName]; !ok {
+		return c.String(http.StatusBadRequest, "Bad request")
+	}
 
-// 	asset := assets.GetAsset(assetName)
-// 	money := assets.GetMoney()
+	number := services.Assets.Get(assetName)
+	basePrice := services.AllAssetReference[assetName].BasePrice
+	price := services.GetPrice(basePrice, number)
+	money := services.Money.Get()
 
-// 	price := assets.GetPrice(asset)
-// 	money = money - price
-// 	if money < 0 {
-// 		return c.String(http.StatusBadRequest, "Not enough money! ")
-// 	}
+	moneyLeft := money - price
+	if moneyLeft < 0 {
+		return c.String(http.StatusBadRequest, "Not enough money! ")
+	}
 
-// 	assets.SetMoney(money)
+	services.Assets.Set(assetName, number+1)
+	services.Money.Set(moneyLeft)
 
-// 	gts := warp.NewGTS("asset").WithLabels(warp.Labels{"name": assetName}).AddDatapoint(time.Now(), 1)
-// 	err := gts.Push("https://"+os.Getenv("ENDPOINT"), os.Getenv("WTOKEN"))
-// 	if err != nil {
-// 		return c.String(http.StatusBadRequest, "Bad request")
-// 	}
-// 	return c.String(http.StatusOK, "OK")
-// }
+	return c.String(http.StatusOK, "OK")
+}

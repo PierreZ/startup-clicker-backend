@@ -13,6 +13,8 @@ var Money *cache.SingleCache
 // CreateMoneyCache is creating a warpcache for the money GTS
 func CreateMoneyCache() error {
 
+	log.Info("Creating MoneyCache...")
+
 	var err error
 
 	config := cache.Configuration{
@@ -33,11 +35,12 @@ func CreateMoneyCache() error {
 
 	go watchErrors(Money.Errors)
 
+	log.Info("Creating MoneyCache is OK")
+
 	return nil
 }
 
 func watchErrors(ch chan error) {
-	//var err error
 	for {
 		err := <-ch
 		log.Errorln(err)

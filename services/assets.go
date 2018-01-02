@@ -13,6 +13,8 @@ var Assets *cache.MultipleCache
 // CreateAssetsCache is creating a warpcache for the Assets GTS
 func CreateAssetsCache() error {
 
+	log.Info("Creating AssetsCache...")
+
 	var err error
 
 	config := cache.Configuration{
@@ -23,9 +25,6 @@ func CreateAssetsCache() error {
 
 	selector := cache.Selector{
 		Classname: "asset",
-		Labels: map[string]string{
-			"name": "~.*",
-		},
 	}
 
 	Assets, err = cache.NewMultipleCache(selector, "name", config)
@@ -33,5 +32,9 @@ func CreateAssetsCache() error {
 		log.Errorln(err.Error())
 		return err
 	}
+	go watchErrors(Assets.Errors)
+
+	log.Info("Creating AssetsCache is OK")
+
 	return nil
 }
