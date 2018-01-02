@@ -126,6 +126,7 @@ func GetAssets() AssetsList {
 	response := AssetsList{}
 	for _, asset := range AllAssetReference {
 		response = append(response, Asset{
+			ID:          asset.ID,
 			Name:        asset.Name,
 			Description: asset.Description,
 			Number:      Assets.Get(asset.Name),
