@@ -56,7 +56,6 @@ func CreateGTS() error {
 	}
 
 	body := fmt.Sprintf(wsCreateGTS, os.Getenv("WTOKEN"), os.Getenv("RTOKEN"), b.String())
-	log.Println(body)
 
 	var resp *http.Response
 	resp, err = http.DefaultClient.Post("https://"+os.Getenv("ENDPOINT")+"/api/v0/exec", "", strings.NewReader(body))
