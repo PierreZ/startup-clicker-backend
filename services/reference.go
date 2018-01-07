@@ -17,8 +17,8 @@ type assetReference struct {
 // Based on http://cookieclicker.wikia.com/wiki/Building
 // TODO: find cool assets
 var AllAssetReference = map[string]assetReference{
-	"a": {
-		Name:        "gradma",
+	"grandma": {
+		Name:        "grandma",
 		Description: "Your grand-mother does not underestand what you are doing, but she's giving you some coins to help you.",
 		BasePrice:   15,
 		Rate:        1,
