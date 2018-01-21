@@ -44,8 +44,8 @@ func CreateGTS() error {
 
 	var selectors []string
 
-	for _, value := range AllAssetReference {
-		selectors = append(selectors, "asset{name="+value.Name+"}")
+	for assetName, _ := range AllAssetReference {
+		selectors = append(selectors, "asset{name="+assetName+"}")
 	}
 	selectors = append(selectors, "money{}")
 
