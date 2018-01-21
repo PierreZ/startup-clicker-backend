@@ -24,6 +24,11 @@ func main() {
 		log.Fatalln(err)
 	}
 
+	err = services.CreateFundraisingCache()
+	if err != nil {
+		log.Fatalln(err)
+	}
+
 	services.CreateWorkers()
 
 	routes.StartServer()

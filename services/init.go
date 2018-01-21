@@ -48,6 +48,7 @@ func CreateGTS() error {
 		selectors = append(selectors, "asset{name="+assetName+"}")
 	}
 	selectors = append(selectors, "money{}")
+	selectors = append(selectors, "fundraising{}")
 
 	b := new(bytes.Buffer)
 	err := json.NewEncoder(b).Encode(selectors)

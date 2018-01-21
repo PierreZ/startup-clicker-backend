@@ -17,6 +17,8 @@ func StartServer() {
 	}))
 
 	e.GET("/api/v0/assets", getAssets)
+	e.GET("/api/v0/upgrade", getUpgrades)
+	e.POST("/api/v0/upgrade", buyUpgrade)
 	e.POST("/api/v0/assets/:asset", buyAsset)
 	e.POST("/api/v0/money", addMoney)
 
