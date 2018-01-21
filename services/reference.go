@@ -145,8 +145,8 @@ func GetAssets() AssetsList {
 			Label:       assetName,
 			Name:        asset.Name,
 			Description: asset.Description,
-			Number:      Assets.Get(asset.Name),
-			Price:       GetPrice(asset.BasePrice, Assets.Get(asset.Name)),
+			Number:      Assets.Get(assetName),
+			Price:       GetPrice(asset.BasePrice, Assets.Get(assetName)),
 			Rate:        asset.Rate,
 		})
 	}
