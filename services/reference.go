@@ -13,7 +13,7 @@ type assetReference struct {
 	ID          int
 }
 
-// All are all the assets available for startup-clicker
+// AllAssetReference are all the assets available for startup-clicker
 // Based on http://cookieclicker.wikia.com/wiki/Building
 // TODO: find cool assets
 var AllAssetReference = map[string]assetReference{
@@ -24,89 +24,103 @@ var AllAssetReference = map[string]assetReference{
 		Rate:        1,
 		ID:          1,
 	},
-	"b": {
-		Name:      "b",
-		BasePrice: 100,
-		Rate:      5,
-		ID:        2,
+	"teammate": {
+		Name:        "Former startup week-end teammate",
+		Description: "Former teammate from the Startup Weekend you intended are joining your team.",
+		BasePrice:   100,
+		Rate:        5,
+		ID:          2,
 	},
-	"c": {
-		Name:      "c",
-		BasePrice: 1100,
-		Rate:      15,
-		ID:        3,
+	"interns": {
+		Name:        "Interns",
+		Description: "Why should you pay them?",
+		BasePrice:   1100,
+		Rate:        15,
+		ID:          3,
 	},
-	"d": {
-		Name:      "d",
-		BasePrice: 12000,
-		Rate:      47,
-		ID:        4,
+	"junior": {
+		Name:        "Junior Engineer",
+		Description: "They are not too expensive, and can be replaced if broken.",
+		BasePrice:   12000,
+		Rate:        47,
+		ID:          4,
 	},
-	"e": {
-		Name:      "e",
-		BasePrice: 130000,
-		Rate:      260,
-		ID:        5,
+	"sales": {
+		Name:        "Sales team",
+		Description: "To start selling a product, you need sales people.",
+		BasePrice:   130000,
+		Rate:        260,
+		ID:          5,
 	},
-	"f": {
-		Name:      "f",
-		BasePrice: 1400000,
-		Rate:      1400,
-		ID:        6,
+	"product": {
+		Name:        "New product",
+		Description: "By creating a new product, you are invading another market.",
+		BasePrice:   1400000,
+		Rate:        1400,
+		ID:          6,
 	},
-	"g": {
-		Name:      "g",
-		BasePrice: 20000000,
-		Rate:      7800,
-		ID:        7,
+	"office": {
+		Name:        "New office",
+		Description: "Opening new offices around the world will help you get worldwide",
+		BasePrice:   20000000,
+		Rate:        7800,
+		ID:          7,
 	},
-	"h": {
-		Name:      "h",
-		BasePrice: 330 * 1000000,
-		Rate:      44000,
-		ID:        8,
+	"manager": {
+		Name:        "Managers",
+		Description: "Someone has to look after the interns and the juniors, right?",
+		BasePrice:   330 * 1000000,
+		Rate:        44000,
+		ID:          8,
 	},
-	"i": {
-		Name:      "i",
-		BasePrice: 5100 * 1000000,
-		Rate:      260000,
-		ID:        9,
+	"consultant": {
+		Name:        "External consultant",
+		Description: "They are cheaper, that's all that matters.",
+		BasePrice:   5100 * 1000000,
+		Rate:        260000,
+		ID:          9,
 	},
-	"j": {
-		Name:      "j",
-		BasePrice: 75000000000,
-		Rate:      1600000,
-		ID:        10,
+	"orga": {
+		Name:        "Changing internal organizations",
+		Description: "The consultant you bought earlier told you to do so.",
+		BasePrice:   75000000000,
+		Rate:        1600000,
+		ID:          10,
 	},
-	"k": {
-		Name:      "k",
-		BasePrice: 1000000000000,
-		Rate:      10000000,
-		ID:        11,
+	"competing": {
+		Name:        "Buying competing company",
+		Description: "It's an easy move to dominate the market.",
+		BasePrice:   1000000000000,
+		Rate:        10000000,
+		ID:          11,
 	},
-	"l": {
-		Name:      "l",
-		BasePrice: 14000000000000,
-		Rate:      65000000,
-		ID:        12,
+	"cryptocurrency": {
+		Name:        "Cryptocurrency",
+		Description: "By designing your own currency, you do not care about the dollar index",
+		BasePrice:   14000000000000,
+		Rate:        65000000,
+		ID:          12,
 	},
-	"m": {
-		Name:      "m",
-		BasePrice: 170000000000000,
-		Rate:      430000000,
-		ID:        13,
+	"serverless": {
+		Name:        "Serverless servers",
+		Description: "One of the consultant told you to reduce IT costs.",
+		BasePrice:   170000000000000,
+		Rate:        430000000,
+		ID:          13,
 	},
-	"n": {
-		Name:      "n",
-		BasePrice: 2100000000000000,
-		Rate:      2900000000,
-		ID:        14,
+	"planetary": {
+		Name:        "New planetary office",
+		Description: "One of the consultant told you to open offices on other planets to reach intergalactic market.",
+		BasePrice:   2100000000000000,
+		Rate:        2900000000,
+		ID:          14,
 	},
-	"o": {
-		Name:      "o",
-		BasePrice: 26000000000000000,
-		Rate:      21000000000,
-		ID:        15,
+	"tardis": {
+		Name:        "Time machine",
+		Description: "By going back in time, you can sell your product throughout the history of mankind.",
+		BasePrice:   26000000000000000,
+		Rate:        21000000000,
+		ID:          15,
 	},
 }
 
