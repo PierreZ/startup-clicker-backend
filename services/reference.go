@@ -126,6 +126,7 @@ var AllAssetReference = map[string]assetReference{
 
 type Asset struct {
 	Name        string  `json:"name"`
+	Label       string  `json:"label"`
 	Description string  `json:"description"`
 	Price       float64 `json:"price"`
 	Number      float64 `json:"number"`
@@ -138,9 +139,10 @@ type AssetsList []Asset
 // GetAssets is returning all the assets
 func GetAssets() AssetsList {
 	response := AssetsList{}
-	for _, asset := range AllAssetReference {
+	for assetName, asset := range AllAssetReference {
 		response = append(response, Asset{
 			ID:          asset.ID,
+			Label:       assetName,
 			Name:        asset.Name,
 			Description: asset.Description,
 			Number:      Assets.Get(asset.Name),
