@@ -18,8 +18,8 @@ type assetReference struct {
 // TODO: find cool assets
 var AllAssetReference = map[string]assetReference{
 	"grandma": {
-		Name:        "grandma",
-		Description: "Your grand-mother does not underestand what you are doing, but she's giving you some coins to help you.",
+		Name:        "Grandmas",
+		Description: "Your grand-mother and her friends do not underestand what you are doing, but they are giving you some coins to help you.",
 		BasePrice:   15,
 		Rate:        1,
 		ID:          1,
