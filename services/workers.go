@@ -6,8 +6,8 @@ import (
 
 // CreateWorkers is creating the workers to generate money
 func CreateWorkers() {
-	for _, asset := range AllAssetReference {
-		go newWorker(asset.Name, asset.Rate)
+	for assetName, asset := range AllAssetReference {
+		go newWorker(assetName, asset.Rate)
 	}
 
 }
