@@ -11,7 +11,7 @@ import (
 func StartServer() {
 	e := echo.New()
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
-		AllowOrigins: []string{"*"},
+		AllowOrigins: []string{"https://pierrez.github.io"},
 		AllowHeaders: []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept},
 		AllowMethods: []string{echo.GET, echo.HEAD, echo.PUT, echo.PATCH, echo.POST, echo.DELETE},
 	}))

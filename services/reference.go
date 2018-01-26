@@ -18,7 +18,7 @@ type assetReference struct {
 // TODO: find cool assets
 var AllAssetReference = map[string]assetReference{
 	"grandma": {
-		Name:        "Grandmas",
+		Name:        "Grandma",
 		Description: "Your grand-mother and her friends do not underestand what you are doing, but they are giving you some coins to help you.",
 		BasePrice:   15,
 		Rate:        1,
@@ -31,8 +31,8 @@ var AllAssetReference = map[string]assetReference{
 		Rate:        5,
 		ID:          2,
 	},
-	"interns": {
-		Name:        "Interns",
+	"intern": {
+		Name:        "Intern",
 		Description: "Why should you pay them?",
 		BasePrice:   1100,
 		Rate:        15,
@@ -45,7 +45,7 @@ var AllAssetReference = map[string]assetReference{
 		Rate:        47,
 		ID:          4,
 	},
-	"sales": {
+	"salesteam": {
 		Name:        "Sales team",
 		Description: "To start selling a product, you need sales people.",
 		BasePrice:   130000,
@@ -67,7 +67,7 @@ var AllAssetReference = map[string]assetReference{
 		ID:          7,
 	},
 	"manager": {
-		Name:        "Managers",
+		Name:        "Manager",
 		Description: "Someone has to look after the interns and the juniors, right?",
 		BasePrice:   330 * 1000000,
 		Rate:        44000,
@@ -80,14 +80,14 @@ var AllAssetReference = map[string]assetReference{
 		Rate:        260000,
 		ID:          9,
 	},
-	"orga": {
+	"neworga": {
 		Name:        "Changing internal organizations",
 		Description: "The consultant you bought earlier told you to do so.",
 		BasePrice:   75000000000,
 		Rate:        1600000,
 		ID:          10,
 	},
-	"competing": {
+	"competingcompagny": {
 		Name:        "Buying competing company",
 		Description: "It's an easy move to dominate the market.",
 		BasePrice:   1000000000000,
@@ -102,7 +102,7 @@ var AllAssetReference = map[string]assetReference{
 		ID:          12,
 	},
 	"serverless": {
-		Name:        "Serverless servers",
+		Name:        "Serverless server",
 		Description: "One of the consultant told you to reduce IT costs.",
 		BasePrice:   170000000000000,
 		Rate:        430000000,
