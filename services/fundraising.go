@@ -20,7 +20,7 @@ func GetFundRaising() Upgrade {
 		Price:     50000,
 	}
 	for i := 0; i < int(Fundraising.Get()); i++ {
-		upgrade.Price = upgrade.Price * 100
+		upgrade.Price = upgrade.Price * 5
 	}
 	log.Printf("%+v", upgrade)
 	return upgrade
